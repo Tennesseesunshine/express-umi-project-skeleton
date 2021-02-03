@@ -8,10 +8,7 @@ const IndexPage: React.FC<IndexPageProps> = () => {
 
   const fetchData = async () => {
     // 向后端发起请求的接口地址
-    const { results } = await request(
-      `/api/proxy/https://api.seniverse.com/v3/weather/now.json?key=SqyEqGutjXKFlmq8W&location=beijing&language=zh-Hans&unit=c`,
-    );
-    // const { results } = await request(`/api/proxy/https://api.seniverse.com/`);
+    const { results } = await request(`/api/proxy/https://api.seniverse.com/`);
     setList(results);
   };
 
