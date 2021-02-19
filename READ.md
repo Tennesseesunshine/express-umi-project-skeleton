@@ -71,6 +71,6 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 ## TODO
 
-* [ ] 打包后的产物的复制或者删除可以考虑用`webpack`插件。
+* [ ] 打包后的产物的复制或者删除可以考虑用`copy-webpack-plugin`和`clean-webpack-plugin`插件替换`shell`。
 
-* [ ] 可以将项目名称设置为一个变量，在利用脚手架生成项目的时候注入进去，避免全局替换出现的未知的问题。
+* [ ] 可以将项目名称等设置为`EJS`的模板变量，在利用`cenarius-cli`脚手架生成项目的时候选择参数，最终遍历整个文件夹中的文件，利用`ejs.render`将参数注入进去。
